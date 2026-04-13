@@ -1,48 +1,48 @@
 # tesa-blueprints
 
-Zentrale Wissensbasis und Standards-Organisation fuer saubere, sichere Softwareentwicklung.
+Central knowledge base and standards organization for clean, secure software development.
 
 ## Blueprints
 
-| Repository | Beschreibung | Inhalt |
-|------------|-------------|--------|
-| [blueprint-project-management](https://github.com/tesa-blueprints/blueprint-project-management) | Projektmanagement Standards | Dokumentation, GitHub Projects, Branching, Code Reviews, Releases |
-| [blueprint-security-advisory](https://github.com/tesa-blueprints/blueprint-security-advisory) | Sicherheitsstandards | OWASP Top 10, Clean Code, Dependencies, Secrets, Code Scanning |
-| [blueprint-terraform-guide](https://github.com/tesa-blueprints/blueprint-terraform-guide) | Terraform + Azure Guide | Projektstruktur, Module, State, Azure Best Practices, CI/CD Pipelines |
+| Repository | Description | Contents |
+|------------|-------------|----------|
+| [blueprint-project-management](https://github.com/tesa-blueprints/blueprint-project-management) | Project Management Standards | Documentation, GitHub Projects, Branching, Code Reviews, Releases |
+| [blueprint-security-advisory](https://github.com/tesa-blueprints/blueprint-security-advisory) | Security Standards | OWASP Top 10, Clean Code, Dependencies, Secrets, Code Scanning |
+| [blueprint-terraform-guide](https://github.com/tesa-blueprints/blueprint-terraform-guide) | Terraform + Azure Guide | Project Structure, Modules, State, Azure Best Practices, CI/CD Pipelines |
 | [blueprint-application-coding-guide](https://github.com/tesa-blueprints/blueprint-application-coding-guide) | Application Coding Guide | TypeScript, React/Next.js, Node.js, API Design, Testing, Auth |
 
-## Struktur
+## Structure
 
-Jedes Blueprint-Repo folgt der gleichen Struktur:
+Every blueprint repo follows the same structure:
 
 ```
-docs/               Menschenlesbare Guides (nummeriert)
-templates/          Kopierbare Vorlagen (Configs, Workflows, etc.)
-claude-config/      Claude-Konfigurationsdateien zum Kopieren in Projekte
-CLAUDE.md           Claude-Regeln fuer die Arbeit am Blueprint selbst
-README.md           Uebersicht und Inhaltsverzeichnis
+docs/               Human-readable guides (numbered)
+templates/          Copy-ready templates (configs, workflows, etc.)
+claude-config/      Claude configuration files to copy into projects
+CLAUDE.md           Claude rules for working on the blueprint itself
+README.md           Overview and table of contents
 ```
 
-## Verwendung
+## Usage
 
-### Fuer Menschen
+### For Humans
 
-1. Das passende Blueprint-Repo oeffnen
-2. Guides in `docs/` lesen
-3. Templates aus `templates/` ins eigene Projekt kopieren
+1. Open the relevant blueprint repo
+2. Read the guides in `docs/`
+3. Copy templates from `templates/` into your own project
 
-### Fuer Claude (AI-Assistent)
+### For Claude (AI Assistant)
 
-1. `claude-config/CLAUDE.md` aus dem passenden Blueprint kopieren
-2. In das Root-Verzeichnis des eigenen Projekts legen
-3. Claude haelt sich automatisch an die definierten Standards
+1. Copy `claude-config/CLAUDE.md` from the relevant blueprint
+2. Place it in the root directory of your project
+3. Claude will automatically adhere to the defined standards
 
 ```bash
-# Beispiel: Security-Regeln und Coding-Guide in ein Projekt kopieren
-cp blueprint-security-advisory/claude-config/CLAUDE.md mein-projekt/CLAUDE-security.md
-cp blueprint-application-coding-guide/claude-config/CLAUDE.md mein-projekt/CLAUDE.md
+# Example: Copy security rules and coding guide into a project
+cp blueprint-security-advisory/claude-config/CLAUDE.md my-project/CLAUDE-security.md
+cp blueprint-application-coding-guide/claude-config/CLAUDE.md my-project/CLAUDE.md
 ```
 
-## Dieses Repo
+## This Repo
 
-`placeholder-codespace` dient als Arbeitsumgebung (GitHub Codespace) fuer die Verwaltung der Blueprints. Es enthaelt keinen produktiven Code.
+`placeholder-codespace` serves as a working environment (GitHub Codespace) for managing the blueprints. It does not contain any production code.
