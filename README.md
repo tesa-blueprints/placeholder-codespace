@@ -88,7 +88,7 @@ Copy `commands/` into your project as `.claude/commands/` to get interactive wor
 
 ## This Repo
 
-`placeholder-codespace` serves as the central hub and working environment (GitHub Codespace) for managing the blueprints. It contains:
+`blueprint-hub` is the central entry point and working environment (GitHub Codespace) for the tesa-blueprints organization. It contains:
 - `starters/` — Ready-to-use combined CLAUDE.md files
 - `commands/` — Custom slash commands for Claude Code sessions
 - `CLAUDE-INTEGRATION-GUIDE.md` — Full guide on how to use blueprints with Claude Code
