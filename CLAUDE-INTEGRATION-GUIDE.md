@@ -107,6 +107,40 @@ cp blueprint-application-coding-guide/templates/.prettierrc my-project/
 cp -r blueprint-application-coding-guide/templates/.github/workflows/ my-project/.github/workflows/
 ```
 
+## How Enforcement Works
+
+The starters include a **Definition of Done** section at the bottom — a mandatory checklist that Claude verifies before every commit. This is the key enforcement mechanism.
+
+### The 4 Enforcement Levels
+
+```
+Level 1: Definition of Done (CLAUDE.md)
+  → Claude self-checks: tests, docs, security, changelog before every commit
+    ↓
+Level 2: Pre-commit Hooks (husky + lint-staged)
+  → Automatic: linting, formatting, secret detection at commit time
+    ↓
+Level 3: CI Pipeline (GitHub Actions)
+  → Automatic: tests, security scans, npm audit, SBOM at PR time
+    ↓
+Level 4: Branch Protection + Code Review
+  → Human: PR approval, CODEOWNERS review at merge time
+```
+
+### What the Definition of Done Enforces
+
+Every starter ends with a block like this that Claude reads and follows:
+
+- Tests exist for every new feature and bug fix
+- All tests pass before committing
+- README and docs are updated when features/architecture change
+- Changelog is maintained
+- No secrets in code
+- Commit messages follow Conventional Commits with issue references
+- Architecture documentation is updated when architecture changes
+
+Claude will not report a task as "done" until all applicable items are confirmed.
+
 ## New Repository Checklist
 
 When creating a new repository, follow these steps:
@@ -114,5 +148,7 @@ When creating a new repository, follow these steps:
 1. Copy the appropriate starter CLAUDE.md into the project root
 2. Copy GitHub templates (issues, PRs, CODEOWNERS)
 3. Copy CI/CD workflows and security scans
-4. Follow the mandatory setup checklist in [blueprint-security-advisory/docs/09-github-repository-setup.md](https://github.com/tesa-blueprints/blueprint-security-advisory/blob/main/docs/09-github-repository-setup.md)
-5. Enable Branch Protection, Dependabot, CodeQL, and Secret Scanning in GitHub settings
+4. Copy pre-commit config for local enforcement
+5. Follow the mandatory setup checklist in [blueprint-security-advisory/docs/09-github-repository-setup.md](https://github.com/tesa-blueprints/blueprint-security-advisory/blob/main/docs/09-github-repository-setup.md)
+6. Enable Branch Protection, Dependabot, CodeQL, and Secret Scanning in GitHub settings
+7. Verify: Run through the Definition of Done checklist manually once to confirm everything works

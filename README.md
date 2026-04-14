@@ -42,13 +42,24 @@ claude-config/          Reusable CLAUDE.md files to copy into your projects
 
 ## Starters (Combined Rules)
 
-Pre-built, all-in-one CLAUDE.md files that combine rules from multiple blueprints:
+Pre-built, all-in-one CLAUDE.md files that combine rules from multiple blueprints. Each starter includes a **mandatory Definition of Done checklist** that Claude verifies before every commit — ensuring tests, documentation, and security are never forgotten.
 
 | Starter | Use Case | Sources |
 |---------|----------|---------|
 | [CLAUDE-typescript-app.md](starters/CLAUDE-typescript-app.md) | React/Next.js + Node.js | PM + Security + App Coding |
 | [CLAUDE-terraform.md](starters/CLAUDE-terraform.md) | Terraform + Azure | PM + Security + Terraform |
 | [CLAUDE-fullstack.md](starters/CLAUDE-fullstack.md) | App + Infrastructure | All 4 blueprints |
+
+## Enforcement Model
+
+Standards are enforced at 4 levels:
+
+| Level | What | When | Automatic? |
+|-------|------|------|------------|
+| **Definition of Done** (CLAUDE.md) | Tests, docs, security, changelog | Before every commit | Claude self-checks |
+| **Pre-commit Hooks** | Linting, formatting, secret detection | At commit time | Yes |
+| **CI Pipeline** | Tests, security scans, npm audit, SBOM | At PR time | Yes |
+| **Branch Protection + Code Review** | PR approval, CODEOWNERS | At merge time | Human review |
 
 ## This Repo
 
