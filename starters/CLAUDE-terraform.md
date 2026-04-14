@@ -4,6 +4,22 @@
 > Sources: blueprint-project-management, blueprint-security-advisory, blueprint-terraform-guide.
 > Use case: Terraform Infrastructure as Code with Azure as the hyperscaler.
 
+## Available Commands
+
+This project has custom slash commands in `.claude/commands/`. Use them:
+
+| Command | When to Use |
+|---------|-------------|
+| `/project:terraform-review` | After Terraform changes — checks fmt, naming, tags, diagnostics |
+| `/project:pre-pr` | Before creating a PR — runs all quality checks |
+| `/project:review` | After completing work — full code review |
+| `/project:security-audit` | Before release or when changing IAM/networking |
+| `/project:check-docs` | After adding resources — verify docs are complete |
+| `/project:add-feature {name}` | Starting new infrastructure work |
+| `/project:fix-bug {name}` | Fixing infrastructure issues |
+
+**These commands are the standard way to execute workflows.** Don't review Terraform manually — run `/project:terraform-review`. Don't create a PR without running `/project:pre-pr`.
+
 ---
 
 ## Language

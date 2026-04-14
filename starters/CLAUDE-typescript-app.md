@@ -4,6 +4,23 @@
 > Sources: blueprint-project-management, blueprint-security-advisory, blueprint-application-coding-guide.
 > Use case: TypeScript application with React/Next.js frontend and Node.js backend.
 
+## Available Commands
+
+This project has custom slash commands in `.claude/commands/`. Use them:
+
+| Command | When to Use |
+|---------|-------------|
+| `/project:add-feature {name}` | Starting new feature work — guides full workflow |
+| `/project:fix-bug {name}` | Starting a bug fix — regression test first, then fix |
+| `/project:pre-pr` | Before creating a PR — runs all quality checks |
+| `/project:review` | After completing work — full code review against these rules |
+| `/project:security-audit` | Before release or when touching auth/data code |
+| `/project:check-docs` | After adding features — verify docs are complete |
+| `/project:update-deps` | Monthly or when dependency PRs pile up |
+| `/project:architecture-review` | After architecture changes |
+
+**These commands are the standard way to execute workflows.** Don't do a code review manually — run `/project:review`. Don't create a PR without running `/project:pre-pr`. Don't start a feature without `/project:add-feature`.
+
 ---
 
 ## Language
