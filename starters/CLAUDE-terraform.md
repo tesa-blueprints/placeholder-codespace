@@ -30,7 +30,7 @@ This project has custom slash commands in `.claude/commands/`. Use them:
 
 - Every code change must have an associated GitHub Issue — no exceptions
 - Issues must be created in THIS repository — never in a central/separate repo. For cross-repo references use `org/repo#123`.
-- Repo naming: `{domain}-{component}` lowercase with hyphens. Terraform repos: prefix `terraform-` or `terraform-module-`. Secrets: `{SERVICE}_{PURPOSE}` UPPER_SNAKE_CASE. Environments: full names (`production`, not `prod`).
+- Naming: Orgs `tesa-{domain}`, Repos `tesa-{domain}-{component}`, Terraform repos `tesa-terraform-` or `tesa-terraform-module-` prefix, Secrets `{SERVICE}_{PURPOSE}` UPPER_SNAKE_CASE, Environments full names (`production`, not `prod`).
 - Always work on feature branches: `feature/`, `fix/`, `chore/`, `docs/`
 - Use Conventional Commits: `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`
 - Every branch merges into `main` via Pull Request with at least one approval
