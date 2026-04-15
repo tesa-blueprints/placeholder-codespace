@@ -32,6 +32,7 @@ This project has custom slash commands in `.claude/commands/`. Use them:
 
 - Every code change must have an associated GitHub Issue — no exceptions. Create the issue first, then code.
 - Issues must be created in THIS repository — never in a central/separate repo. For cross-repo references use `org/repo#123`.
+- Repo naming: `{domain}-{component}` lowercase with hyphens. Terraform repos: prefix `terraform-` or `terraform-module-`. Secrets: `{SERVICE}_{PURPOSE}` UPPER_SNAKE_CASE. Environments: full names (`production`, not `prod`).
 - Always work on feature branches, never directly on `main`
 - Branch naming: `{type}/{description}` — e.g., `feature/user-profile`, `fix/login-redirect`, `chore/update-deps`
 - Allowed prefixes: `feature/`, `fix/`, `chore/`, `docs/`, `refactor/`, `test/`
